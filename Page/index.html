@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor.js">
+
+    </script>
     <title>Hibernate</title>
   </head>
   <body>
@@ -14,15 +18,15 @@
         </header>
         <nav>
           <div class="nav1 ">
-              <li class="blue" style="background-color: rgb(51, 51, 255);"><a href="#">Add</a></li>
-              <li class="red" ><a href="#">Del</a></li>
-              <li class="green" style="background-color: rgb(51, 255, 51);"><a href="#">Edit</a></li>
+              <li id="add" class="blue" style="background-color: rgb(51, 51, 255);"><a href="">Add</a></li>
+              <li id="del" class="red" ><a href="">Del</a></li>
+              <li id="edit" class="green" style="background-color: rgb(51, 255, 51);"><a href="">Edit</a></li>
           </div>
           <div class="nav2">
             <form action="">
               <input type="search" name="" value="" placeholder="Search">
             </form>
-            <li><a href="#">Search</a></li>
+            <li><a href="">Search</a></li>
           </div>
         </nav>
         <div class="tablas" id="tablas">
@@ -66,13 +70,40 @@
       <aside>
       <div class="menu">
         <h1>Pick one</h1>
-            <li><a href="#">Students</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">Schedule</a></li>
-            <li><a href="#">Cities</a></li>
+            <li><a href="">Students</a></li>
+            <li><a href="">Programs</a></li>
+            <li><a href="">Schedule</a></li>
+            <li><a href="">Cities</a></li>
         </div>
       </aside>
-
+      <div class="modal" id="dialog">
+        <div class="modal-content">
+          <span id="close" class="close">&times;</span>
+            <div class="title-form">
+              <h3>Add Student</h3>
+            </div>
+          <form class="" action="index.html" method="post">
+            <div class="info">
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" /><br>
+              <label for="mail">Mail:</label><br>
+              <input type="email" id="mail" /><br>
+              <label for="password">Password:</label><br>
+              <input type="password" id="password" /><br>
+            </div>
+            <div class="actions">
+              <select name="combobox">
+                <option value="A">Ciudad A</option>
+                <option value="B">Ciudad B</option>
+                <option value="C">Ciudad C</option>
+                <option value="-">Other</option>
+              </select>
+              <input class="btn green" type="submit" name="add" value="Add">
+              <button class="btn red" type="button" name="button">Cancel</button>
+            </div>
+          </form>
+      </div>
+      </div>
     </div>
   </body>
 </html>
